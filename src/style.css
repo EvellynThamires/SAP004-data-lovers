@@ -1,3 +1,44 @@
+
+.title {
+    font-family: 'PT Mono', monospace;
+    font-size: 80px;
+    text-align: center;
+    padding: 40px;
+}
+
+.bttn {
+    font-family: 'PT Mono', monospace;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: white;
+    width: 280px;
+    height: 45px;
+}
+
+.first-row-of-buttons {
+    display: flex;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.icon {
+    height: 45px;
+    width: 50px;
+    text-align: center;
+} 
+
+.txt-area {
+    height: 37px;
+}
+
+.second-row-of-buttons {
+    margin-right: 15px;
+    display: flex;
+    padding: 10px;
+}
+
 .background {
     width: 90vw;
     margin: 0 auto;

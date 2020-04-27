@@ -21,4 +21,3 @@ data.pokemon.forEach(element => {
     //Adicionando as divs dentro da div "Root".
     content.innerHTML += createDiv
 });
-
