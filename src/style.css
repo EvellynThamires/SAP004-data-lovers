@@ -39,15 +39,209 @@
     padding: 10px;
 }
 
-.box-color {
+.background {
+    width: 90vw;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box-pokemon {
-    width: 22%;
+    width: 23%;
+    height: 100px;
     margin: 1%;
     text-align: center;
-    border: 2px solid darkviolet;
-    background-color: #87CEFA;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-pokemon{
+    padding: 15px;
+    color: white;
+}
+
+.box-pokemon img {
+    width: 70px;
+}
+
+.box-image{
+    height: 100px;
+    width: 100px;
+    padding-left: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Normal{
+    background-color: rgb(90, 33, 6);
+}
+
+.Normal-light{
+    background-color: rgba(90, 33, 6, 0.73);
+}
+
+.Fire {
+    background-color: rgb(255, 69, 0);
+}
+
+.Fire-light {
+    background-color: rgba(255, 69, 0, 0.73);
+}
+
+.Water {
+    background-color: rgb(25, 25, 112);
+}
+
+.Water-light {
+    background-color: rgba(25, 25, 112, 0.73);
+}
+
+.Grass {
+    background-color: rgb(34, 139, 34);
+}
+
+.Grass-light{
+    background-color: rgba(34, 139, 34, 0.73);
+}
+
+.Poison {
+    background-color: rgb(97, 15, 97);
+}
+
+.Poison-light{
+    background-color: rgba(97, 15, 97, 0.73);
+}
+
+.Electric{
+    background-color: rgb(197, 197, 23);
+}
+
+.Electric-light{
+    background-color: rgba(193, 193, 46, 0.73);
+}
+
+.Ground{
+    background-color: rgb(154, 133, 19)
+}
+
+.Ground-light{
+    background-color: rgba(154, 133, 19, 0.73);
+}
+
+.Psychic{
+    background-color: rgb(249, 5, 136);
+}
+
+.Psychic-light{
+    background-color: rgba(249, 5, 136, 0.73);
+}
+
+.Rock{
+    background-color: rgb(181, 119, 60);
+}
+
+.Rock-light{
+    background-color: rgba(181, 119, 60, 0.73);
+}
+
+.Ice{
+    background-color: rgb(39, 65, 88);
+}
+
+.Ice-light{
+    background-color: rgba(39, 65, 88, 0.73);
+}
+
+.Bug{
+    background-color: rgb(150, 162, 48);
+}
+
+.Bug-light{
+    background-color: rgba(150, 162, 48, 0.73);
+}
+
+.Dragon{
+    background-color: rgb(15, 15, 56)
+}
+
+.Dragon-light{
+    background-color: rgba(15, 15, 56, 0.73);
+    
+}
+
+.Ghost{
+    background-color: rgb(158, 39, 78)
+}
+
+.Ghost-light{
+    background-color: rgba(158, 39, 78, 0.73);
+}
+
+.Steel{
+    background-color: rgb(79, 79, 79);
+}
+
+.Steel-light{
+    background-color: rgba(79, 79, 79, 0.73);
+}
+
+.Fairy{
+    background-color: rgb(255, 20, 147);
+}
+
+.Fairy-light{
+    background-color: rgba(255, 20, 147, 0.73);
+}
+
+.Dark{
+    background-color: rgb(139, 69, 19);
+}
+
+.Dark-light{
+    background-color: rgba(139, 69, 19, 0.73);
+}
+
+.Flying{
+    background-color: rgb(75, 0, 130);
+}
+
+.Flying-light{
+    background-color: rgba(75, 0, 130, 0.73);
+}
+
+.Fighting{
+    background-color: rgb(160, 0, 32);
+}
+
+.Fighting-light{
+    background-color: rgba(160, 0, 32, 0.73);
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 300px) and (max-width: 767.98px) {
+    .box-pokemon {
+        width: 98%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .box-pokemon {
+        width: 98%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .box-pokemon{
+        width: 46%;
+    }
 }
