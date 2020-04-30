@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <title>POKÉMON GO DATABASE</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,26 +17,45 @@
       <h1>POKÉMON GO DATABASE</h1>
     </div>
 
-    <div class="first-row-of-buttons">
-      <button type="button" class="bttn"><i><img src="img/pokemon-go.png"> Conheça o jogo!</i></button>
-      <button type="button" class="bttn"><i><img src="img/insignia.png"> Favoritos</i></button>
-    </div>
+    <section class="section-buttons">
+      <div class="know-the-game icon">
+        <button type="button" class="bttn">Conheça o
+          jogo!</button>
+      </div>
 
-    <div class="second-row-of-buttons">
-      <select class="bttn" id="filter-options">
-        <option value="none" class="bttn">Filtrar</option>
-        <option value="none" class="bttn">Filtrar por tipo</option>
-        <option value="none" class="bttn">Filtrar por fraqueza</option>
-        <option value="nome" class="bttn">A-Z</option>
-        <option value="nome" class="bttn">Z-A</option>
-      </select>
+      <div class="favorites icon">
+        <button type="button" class="bttn">Favoritos</button>
+      </div>
 
-      <form>
-        <textarea id="search" class="bttn txt-area" name="search" cols="20"
-          placeholder="Procurar pokémon..."></textarea>
-        <button type="button" class="bttn icon fa fa-search"></button>
-      </form>
-    </div>
+      <div class="filter">
+        <select class="bttn" id="filter-by-type">
+          <option value="filter" class="options-type">Filtrar por tipo</option>
+          <option value="Grass" class="options-type">Planta</option>
+          <option value="Poison" class="options-type">Venenoso</option>
+          <option value="Fire" class="options-type">Fogo</option>
+          <option value="Water" class="options-type">Água</option>
+          <option value="Rock" class="options-type">Pedra</option>
+          <option value="Flying" class="options-type">Voador</option>
+          <option value="Ghost" class="options-type">Fantasma</option>
+          <option value="Ice" class="options-type">Gelo</option>
+          <option value="Dragon" class="options-type">Dragão</option>
+          <option value="Bug" class="options-type">Inseto</option>
+          <option value="Normal" class="options-type">Normal</option>
+          <option value="Eletric" class="options-type">Elétrico</option>
+          <option value="Ground" class="options-type">Terra</option>
+          <option value="Fighting" class="options-type">Lutador</option>
+          <option value="Psychic" class="options-type">Psíquico</option>
+        </select>
+      </div>
+
+      <div class="order">
+        <select class="bttn" id="order-button">
+          <option value="order" class="options-order">Ordenar</option>
+          <option value="alpha" class="options-order">A-Z</option>
+          <option value="alpha" class="options-order">Z-A</option>
+      </div>
+
+    </section>
   </header>
 
   <div class="background" id="root"></div>

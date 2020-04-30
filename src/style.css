@@ -11,37 +11,22 @@ body{
     padding: 40px;
 }
 
+.section-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: nowrap;
+}
+
 .bttn {
-    font-family: 'PT Mono', monospace;
+    height: 40px;
     font-size: 20px;
-    text-align: left;
     border-radius: 8px;
     border: 2px solid black;
     background-color: white;
-    width: 280px;
-    height: 45px;
-}
+    background-image: linear-gradient(3deg, rgb(236, 225, 225), transparent);
+    font-family: 'PT Mono', monospace;
 
-.first-row-of-buttons {
-    display: flex;
-    margin-right: 15px;
-    padding: 10px;
-}
-
-.icon {
-    height: 45px;
-    width: 50px;
-    text-align: center;
-} 
-
-.txt-area {
-    height: 37px;
-}
-
-.second-row-of-buttons {
-    margin-right: 15px;
-    display: flex;
-    padding: 10px;
 }
 
 .background {
