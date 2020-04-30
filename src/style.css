@@ -1,3 +1,9 @@
+body{
+    background-image: url(./img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-color: #eeeeee ;
+}
+
 .title {
     font-family: 'PT Mono', monospace;
     font-size: 80px;
@@ -73,6 +79,8 @@
     padding-left: 5px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
