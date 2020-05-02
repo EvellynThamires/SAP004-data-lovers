@@ -1,8 +1,9 @@
 import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+
 //Pegando a id "Root" do HTML
-const content = document.querySelector("#root") 
+const content = document.querySelector("#root");
 
 data.pokemon.forEach(element => {   
     
