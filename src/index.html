@@ -3,12 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>POKÉMON GO DATABASE</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -41,7 +45,8 @@
           <option value="Dragon">Dragão</option>
           <option value="Bug">Inseto</option>
           <option value="Normal">Normal</option>
-          <option value="Eletric">Elétrico</option>
+          <option value="Electric">Elétrico</option>
+          <option value="Fairy">Fada</option>
           <option value="Ground">Terra</option>
           <option value="Fighting">Lutador</option>
           <option value="Psychic">Psíquico</option>
@@ -50,13 +55,49 @@
 
       <div class="order">
         <select class="bttn" id="order-button">
-          <option value="order" class="options-order">Ordenar</option>
-          <option value="alpha" class="options-order">A-Z</option>
-          <option value="alpha" class="options-order">Z-A</option>
+          <option value="a-z" class="options-order">Ordenar</option>
+          <option value="a-z" class="options-order">A-Z</option>
+          <option value="z-a" class="options-order">Z-A</option>
         </select>
       </div>
     </section>
   </header>
+
+  <div id="modals" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+        <div class="modal-name">
+          <h1></h1>
+        </div>
+        <div class="modal-calculus-info">
+          <div class="modal-calculus">
+          </div>
+          <div class="modal-information">
+            <p>Altura: <span id="height"></span></p>
+            <p>Peso: <span id="weight"></span></p>
+            <p>Candy: <span id="candy"></span></p>
+            <p>Quantidade de doces: <span id="candy-quantity"></span></p>
+          </div>
+        </div>
+        <div class="modal-status">
+          <div class="modal-type">
+            <h3>Tipos</h3>
+            <div id="types"></div>
+          </div>
+          <div class="modal-weakness">
+            <h3>Fraquezas</h3>
+            <div id="weakness"></div>
+          </div>
+        </div>
+        <div class="modal-evolution">
+          <div class="modal-evolutions">
+            <h3>Evoluções</h3>
+            <div class="content-evolution">
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
 
   <div class="background" id="root"></div>
 
