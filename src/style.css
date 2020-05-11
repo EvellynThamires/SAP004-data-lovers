@@ -24,8 +24,28 @@ body{
     border-radius: 8px;
     border: 2px solid black;
     background-color: white;
-    background-image: linear-gradient(3deg, rgb(236, 225, 225), transparent);
+    background-image: linear-gradient(3deg, rgb(212, 201, 201), transparent);
     font-family: 'PT Mono', monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txtarea {
+    background-color: white;
+    border-radius: 8px;
+    background-image: linear-gradient(3deg, rgb(241, 238, 238), transparent);
+    font-family: 'PT Mono', monospace;
+    justify-content: center;
+    align-items: center;
+    
+    border-color: white;
+
 }
 
 .background {
@@ -34,6 +54,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+footer {
+    background-color: rgb(56, 54, 54);
+    text-align: center;
+    color: white;
+    padding: 50px;
 }
 
 .box-pokemon {

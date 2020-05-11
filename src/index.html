@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -18,48 +19,59 @@
     </div>
 
     <section class="section-buttons">
-      <div class="know-the-game icon">
-        <button type="button" class="bttn">Conheça o
+      <div class="know-the-game">
+        <button type="button" class="bttn align"><img src="img/button-pokemon-go.png">Conheça o
           jogo!</button>
       </div>
 
-      <div class="favorites icon">
-        <button type="button" class="bttn">Favoritos</button>
+      <div class="favorites">
+        <button type="button" class="bttn align"><img src="img/insignia.png">Favoritos</button>
       </div>
 
       <div class="filter">
         <select class="bttn" id="filter-by-type">
-          <option value="filter" class="options-type">Filtrar por tipo</option>
-          <option value="Grass" class="options-type">Planta</option>
-          <option value="Poison" class="options-type">Venenoso</option>
-          <option value="Fire" class="options-type">Fogo</option>
-          <option value="Water" class="options-type">Água</option>
-          <option value="Rock" class="options-type">Pedra</option>
-          <option value="Flying" class="options-type">Voador</option>
-          <option value="Ghost" class="options-type">Fantasma</option>
-          <option value="Ice" class="options-type">Gelo</option>
-          <option value="Dragon" class="options-type">Dragão</option>
-          <option value="Bug" class="options-type">Inseto</option>
-          <option value="Normal" class="options-type">Normal</option>
-          <option value="Eletric" class="options-type">Elétrico</option>
-          <option value="Ground" class="options-type">Terra</option>
-          <option value="Fighting" class="options-type">Lutador</option>
-          <option value="Psychic" class="options-type">Psíquico</option>
+          <option value="filter">Filtrar por tipo</option>
+          <option value="Grass">Planta</option>
+          <option value="Poison">Venenoso</option>
+          <option value="Fire">Fogo</option>
+          <option value="Water">Água</option>
+          <option value="Rock">Pedra</option>
+          <option value="Flying">Voador</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Ice">Gelo</option>
+          <option value="Dragon">Dragão</option>
+          <option value="Bug">Inseto</option>
+          <option value="Normal">Normal</option>
+          <option value="Electric">Elétrico</option>
+          <option value="Ground">Terra</option>
+          <option value="Fighting">Lutador</option>
+          <option value="Psychic">Psíquico</option>
         </select>
       </div>
 
       <div class="order">
         <select class="bttn" id="order-button">
-          <option value="order" class="options-order">Ordenar</option>
-          <option value="alpha" class="options-order">A-Z</option>
-          <option value="alpha" class="options-order">Z-A</option>
+          <option value="order">Ordenar</option>
+          <option value="a-z" class="a-z">A-Z</option>
+          <option value="z-a" class="z-a">Z-A</option>
         </select>
+      </div>
+
+      <div class="align bttn">
+        <form action="data.js.js">
+          <textarea id="search" class="txtarea" rows="1" cols="18" placeholder="Procurar pokémon..."></textarea><img
+            src="img/lupa.png"></form>
       </div>
 
     </section>
   </header>
 
   <div class="background" id="root"></div>
+
+  <footer>
+    © Desenvolvido por Evellyn e Ully
+  </footer>
+
   <script src="main.js" type="module"></script>
 </body>
 
