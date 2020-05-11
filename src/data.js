@@ -8,13 +8,13 @@ export const filterType = (bttnFilter, pokemons) => {
 
   pokemons.forEach(positionPokemon => {
 
-    let findTypePokemon = positionPokemon.type.find(element => element == type)
-    
-    if(findTypePokemon != undefined){
+    let findTypePokemon = positionPokemon.type.find(pokemon => pokemon == type)
+
+    if (findTypePokemon != undefined) {
       emptyArray.push(positionPokemon)
     }
   });
-return emptyArray
+  return emptyArray
 };
 
 export const filterOrder = (bttnOrder, pokemons) => {
@@ -44,3 +44,13 @@ export const filterOrder = (bttnOrder, pokemons) => {
     });
   }
 }
+
+export const searchPokemon = (bttnSearch, pokemon) => {
+  let searchString = bttnSearch.value.toLowerCase();
+  let filterPokemon = pokemon.filter(data => {
+    let pokemonString = data.name.toLowerCase();
+    let stringByString = pokemonString.substr(0, searchString.length);
+    return (stringByString.includes(searchString));
+  });
+  return filterPokemon;
+};

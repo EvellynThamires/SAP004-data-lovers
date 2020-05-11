@@ -1,9 +1,13 @@
-import { filterType, filterOrder } from './data.js';
+import { filterType, filterOrder, searchPokemon } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
+//Pegando a id "Root" do HTML
 const content = document.querySelector("#root"); 
+//Pegando id dos botões
 const bttnFilter = document.querySelector("#filter-by-type");
 const bttnOrder = document.querySelector("#order-button");
+//area de pesquisar pokemon
+const bttnSearch = document.querySelector("#search");
 
 const modal = document.querySelector("#modals");
 const span = document.getElementsByClassName("close")[0];
@@ -16,6 +20,7 @@ const candyQuantityPokemon = document.querySelector("#candy-quantity");
 const typePokemon = document.querySelector("#types");
 const weaknessPokemon = document.querySelector("#weakness");
 const evolutionPokemon = document.querySelector(".content-evolution");
+
 
 function showElements(data){
     if(data.length != 0){
@@ -45,6 +50,8 @@ function showElements(data){
         `
             <p class="alert">Pokemons não encontrados</p>
         `
+
+        //Adicionando as divs dentro da div "Root".
         content.innerHTML += createDiv
     }
 }
@@ -126,13 +133,14 @@ function addEventCards(pokemon) {
     })
 }
 
-function clearHtml(){
+function clearHtml() {
     content.innerHTML = ''
 }
 
 showElements(data.pokemon)
 
-bttnFilter.addEventListener("change", function() {
+//evento que mostra os cards filtrados em uma função
+bttnFilter.addEventListener("change", function () {
     let filterTypePokemon = filterType(bttnFilter, data.pokemon)
     clearHtml()
     showElements(filterTypePokemon)
@@ -146,4 +154,16 @@ bttnOrder.addEventListener("change", function() {
 
 
 
+//evento que mostra os cards em ordem alfabetica
+bttnOrder.addEventListener("change", function () {
+    let orderAlpha = orderAz(bttnOrder, data.pokemon)
+    clearHtml()
+    showElements(orderAlpha)
+});
 
+//evento que mostra os cards pesquisados no input de texto
+bttnSearch.addEventListener("keydown", function () {
+    let searchStringByString = searchPokemon(bttnSearch, data.pokemon)
+    clearHtml()
+    showElements(searchStringByString)
+});
