@@ -1,9 +1,8 @@
 // Funções de exemplo
 // import pokemon from "./data/pokemon/pokemon";
 
-export const filterType = (bttnFilter, pokemons) => {
-  let type = bttnFilter[bttnFilter.selectedIndex].value
-
+export const filterType = (type, pokemons) => {
+  
   let emptyArray = []
 
   pokemons.forEach(positionPokemon => {
@@ -17,9 +16,8 @@ export const filterType = (bttnFilter, pokemons) => {
   return emptyArray
 };
 
-export const filterOrder = (bttnOrder, pokemons) => {
-  let order = bttnOrder[bttnOrder.selectedIndex].value
-  
+export const filterOrder = (order, pokemons) => {
+
   if(order == "a-z"){
     return pokemons.sort(function (a, b) {
       if (a.name > b.name) {

@@ -185,25 +185,21 @@ function showEvolution(infoPokemon) {
         `
     })
 }
+
 //evento que mostra os cards filtrados em uma função
 bttnFilter.addEventListener("change", function () {
-    let filterTypePokemon = filterType(bttnFilter, data.pokemon)
+    let type = bttnFilter[bttnFilter.selectedIndex].value
+    let filterTypePokemon = filterType(type, data.pokemon)
     clearHtml()
     showElements(filterTypePokemon)
 })
 
 bttnOrder.addEventListener("change", function() {
-    let order = filterOrder(bttnOrder, data.pokemon)
+    let order = bttnOrder[bttnOrder.selectedIndex].value
+    let itens = filterOrder(order, data.pokemon)
     clearHtml()
-    showElements(order)
+    showElements(itens)
 })
-
-//evento que mostra os cards em ordem alfabetica
-bttnOrder.addEventListener("change", function () {
-    let orderAlpha = orderAz(bttnOrder, data.pokemon)
-    clearHtml()
-    showElements(orderAlpha)
-});
 
 //evento que mostra os cards pesquisados no input de texto
 bttnSearch.addEventListener("keydown", function () {
