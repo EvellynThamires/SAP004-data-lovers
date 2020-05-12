@@ -21,7 +21,6 @@ const typePokemon = document.querySelector("#types");
 const weaknessPokemon = document.querySelector("#weakness");
 const evolutionPokemon = document.querySelector(".content-evolution");
 
-
 function showElements(data){
     if(data.length != 0){
         data.forEach(element => {   
@@ -70,8 +69,14 @@ function addEventCards(pokemon) {
             heightPokemon.innerHTML = `${pokemonClicked.height}`
             weigthPokemon.innerHTML = `${pokemonClicked.weight}`
             candyPokemon.innerHTML = `${pokemonClicked.candy}`
-            candyQuantityPokemon.innerHTML = `${pokemonClicked.candy_count}`
-
+            
+            if(pokemonClicked.candy_count == undefined){
+                candyQuantityPokemon.innerHTML = "N/A"
+            }
+            else{
+                candyQuantityPokemon.innerHTML = `${pokemonClicked.candy_count}`
+            }
+            
             typePokemon.innerHTML = ""
             pokemonClicked.type.forEach(element => {
                 typePokemon.innerHTML += `<div class="chip ${element}">${element}</div>`
@@ -82,41 +87,69 @@ function addEventCards(pokemon) {
                 weaknessPokemon.innerHTML += `<div class="chip ${element}">${element}</div>`
             })
 
-            evolutionPokemon.innerHTML = ""
-            // evolutionPokemon.innerHTML += `
-            // <div class="evolution-info"> 
-            //     <img src="${pokemonClicked.img}">
-            //     <p>${pokemonClicked.num}</p>
-            //     <p>${pokemonClicked.name}</p>
-            // </div>
-            // `
+            evolutionPokemon.innerHTML = "" 
+                if(pokemonClicked.next_evolution && pokemonClicked.next_evolution.length >= 2){
+                    evolutionPokemon.innerHTML += `
+                        <div class="evolution-info"> 
+                            <img src="${pokemonClicked.img}">
+                            <p>#${pokemonClicked.num}</p>
+                            <p>${pokemonClicked.name}</p>
+                        </div>
+                    `
+                    showEvolution(pokemonClicked.next_evolution)
+                }
+                else if(pokemonClicked.next_evolution && pokemonClicked.next_evolution.length > 0 
+                    && pokemonClicked.prev_evolution && pokemonClicked.prev_evolution.length > 0){
+                    showEvolution(pokemonClicked.prev_evolution)
+                        evolutionPokemon.innerHTML += `
+                            <div class="evolution-info"> 
+                                <img src="${pokemonClicked.img}">
+                                <p>#${pokemonClicked.num}</p>
+                                <p>${pokemonClicked.name}</p>
+                            </div>
+                        `
+                    showEvolution(pokemonClicked.next_evolution)
+                }
+                else if(pokemonClicked.next_evolution && pokemonClicked.next_evolution.length >= 1){
+                    evolutionPokemon.innerHTML += `
+                        <div class="evolution-info"> 
+                            <img src="${pokemonClicked.img}">
+                            <p>#${pokemonClicked.num}</p>
+                            <p>${pokemonClicked.name}</p>
+                        </div>
+                    `
+                    showEvolution(pokemonClicked.next_evolution)
+                }
+                else if(pokemonClicked.prev_evolution && pokemonClicked.prev_evolution.length >= 1){
+                    showEvolution(pokemonClicked.prev_evolution)
+                        evolutionPokemon.innerHTML += `
+                            <div class="evolution-info"> 
+                                <img src="${pokemonClicked.img}">
+                                <p>#${pokemonClicked.num}</p>
+                                <p>${pokemonClicked.name}</p>
+                            </div>
+                        `
+                }
+                else if(pokemonClicked.prev_evolution && pokemonClicked.prev_evolution.length >= 2){
+                    showEvolution(pokemonClicked.prev_evolution)
+                        evolutionPokemon.innerHTML += `
+                            <div class="evolution-info"> 
+                                <img src="${pokemonClicked.img}">
+                                <p>#${pokemonClicked.num}</p>
+                                <p>${pokemonClicked.name}</p>
+                            </div>
+                        `
+                }
+                else{
+                    evolutionPokemon.innerHTML += `
+                        <div class="evolution-info"> 
+                            <img src="${pokemonClicked.img}">
+                            <p>#${pokemonClicked.num}</p>
+                            <p>${pokemonClicked.name}</p>
+                        </div>
+                    `
+                }
             
-            if(pokemonClicked.prev_evolution != undefined){
-                pokemonClicked.prev_evolution.forEach(element => {
-                    let pokemonData = data.pokemon.find(pokemon => pokemon.num == element.num)
-                    evolutionPokemon.innerHTML += `
-                    <div class="evolution-info"> 
-                        <img src="${pokemonData.img}">
-                        <p>#${pokemonData.num}</p>
-                        <p>${pokemonData.name}</p>
-                    </div>
-                    `
-                })
-            }
-
-            if(pokemonClicked.next_evolution != undefined){
-                pokemonClicked.next_evolution.forEach(element => {
-                    let pokemonData = data.pokemon.find(pokemon => pokemon.num == element.num)
-                    evolutionPokemon.innerHTML += `
-                    <div class="evolution-info"> 
-                        <img src="${pokemonData.img}">
-                        <p>#${pokemonData.num}</p>
-                        <p>${pokemonData.name}</p>
-                    </div>
-                    `
-                })
-            }
-
             //Quando clicar nas caixinhas, aparece o modal.
             modal.style.display = "block"
             //Esconder o modal quando for clicado no "x"
@@ -139,6 +172,19 @@ function clearHtml() {
 
 showElements(data.pokemon)
 
+
+function showEvolution(infoPokemon) {
+    infoPokemon.forEach(element => {
+        let pokemonData = data.pokemon.find(pokemon => pokemon.num == element.num)
+        evolutionPokemon.innerHTML += `
+        <div class="evolution-info"> 
+            <img src="${pokemonData.img}">
+            <p>#${pokemonData.num}</p>
+            <p>${pokemonData.name}</p>
+        </div>
+        `
+    })
+}
 //evento que mostra os cards filtrados em uma função
 bttnFilter.addEventListener("change", function () {
     let filterTypePokemon = filterType(bttnFilter, data.pokemon)
@@ -151,8 +197,6 @@ bttnOrder.addEventListener("change", function() {
     clearHtml()
     showElements(order)
 })
-
-
 
 //evento que mostra os cards em ordem alfabetica
 bttnOrder.addEventListener("change", function () {

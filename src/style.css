@@ -211,11 +211,11 @@ footer {
 }
 
 .Fairy{
-    background-color: rgb(255, 20, 147);
+    background-color: rgb(255, 0, 255);
 }
 
 .Fairy-light{
-    background-color: rgba(255, 20, 147, 0.73);
+    background-color: rgba(255, 0, 255, 0.73);
 }
 
 .Dark{
