@@ -378,24 +378,38 @@ footer {
     margin: 5px;
 }
 
+
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 300px) and (max-width: 759.98px) {
+@media (min-width: 300px) and (max-width: 991.98px){
     .box-pokemon {
         width: 98%;
     }
+
+    .section-buttons {
+        display: block;
+        padding: 50px;
+    }
+
+    .bttn {
+        width: 100%;
+        
+
+    }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) 
 @media (min-width: 760px) and (max-width: 991.98px) {
     .box-pokemon {
         width: 46%;
     }
-}
+}*/
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .box-pokemon {
         width: 31%;
     }
+
 }
+
 

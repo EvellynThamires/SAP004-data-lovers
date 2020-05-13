@@ -155,11 +155,11 @@ bttnOrder.addEventListener("change", function() {
 
 
 //evento que mostra os cards em ordem alfabetica
-bttnOrder.addEventListener("change", function () {
-    let orderAlpha = orderAz(bttnOrder, data.pokemon)
-    clearHtml()
-    showElements(orderAlpha)
-});
+//bttnOrder.addEventListener("change", function () {
+  //  let orderAlpha = orderAz(bttnOrder, data.pokemon)
+  //  clearHtml()
+   // showElements(orderAlpha)
+//});
 
 //evento que mostra os cards pesquisados no input de texto
 bttnSearch.addEventListener("keydown", function () {

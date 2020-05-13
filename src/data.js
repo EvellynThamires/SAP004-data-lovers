@@ -2,6 +2,7 @@
 // import pokemon from "./data/pokemon/pokemon";
 
 export const filterType = (bttnFilter, pokemons) => {
+  debugger;
   let type = bttnFilter[bttnFilter.selectedIndex].value
 
   let emptyArray = []
