@@ -10,7 +10,9 @@ const bttnOrder = document.querySelector("#order-button");
 const bttnSearch = document.querySelector("#search");
 
 const modal = document.querySelector("#modals");
-const span = document.getElementsByClassName("close")[0];
+const modalGame = document.querySelector("#modal-game");
+const bttnGame = document.querySelector("#bttn-game")
+const span = document.getElementsByClassName("close");
 
 const namePokemon = document.querySelector(".modal-name h1");
 const heightPokemon = document.querySelector("#height");
@@ -153,7 +155,7 @@ function addEventCards(pokemon) {
             //Quando clicar nas caixinhas, aparece o modal.
             modal.style.display = "block"
             //Esconder o modal quando for clicado no "x"
-            span.onclick = function() {
+            span[0].onclick = function() {
                 modal.style.display = "none";
             }
             //Caso o clique seja fora do modal, ele desaparece.
@@ -165,6 +167,8 @@ function addEventCards(pokemon) {
         })
     })
 }
+
+
 
 function clearHtml() {
     content.innerHTML = ''
@@ -208,3 +212,18 @@ bttnSearch.addEventListener("keydown", function () {
     clearHtml()
     showElements(searchStringByString)
 });
+
+bttnGame.addEventListener("click", function(){
+    //Quando clicar nas caixinhas, aparece o modal.
+    modalGame.style.display = "block"
+    //Esconder o modal quando for clicado no "x"
+    span[1].onclick = function() {
+        modalGame.style.display = "none";
+    }
+    //Caso o clique seja fora do modal, ele desaparece.
+    window.onclick = function(event) {
+        if(event.target == modalGame) {
+            modalGame.style.display = "none"
+        }
+    }
+})

@@ -261,7 +261,7 @@ footer {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #FFFFF0;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
@@ -376,6 +376,40 @@ footer {
 
 .evolution-info p{
     margin: 5px;
+}
+
+.game-information{
+    display: flex;
+    width: 100%;
+}
+
+.game-first-info{
+    width: 80%;
+    padding: 0 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+}
+
+.game-image{
+    width: 20%;
+}
+
+.game-image img{
+    width: 100%;
+    height: auto;
+}
+
+.game-second-info h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: 'Jost', sans-serif;
+}
+
+.game-second-info p{
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
 }
 
 /* Small devices (landscape phones, 576px and up) */

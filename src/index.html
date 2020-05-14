@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
     <section class="section-buttons">
       <div class="know-the-game">
-        <button type="button" class="bttn align"><img src="img/button-pokemon-go.png">Conheça o
+        <button type="button" id="bttn-game" class="bttn align"><img src="img/button-pokemon-go.png">Conheça o
           jogo!</button>
       </div>
 
@@ -74,6 +75,7 @@
       <span class="close">&times;</span>
         <div class="modal-name">
           <h1></h1>
+          <i class="far fa-star"></i>
         </div>
         <div class="modal-calculus-info">
           <div class="modal-calculus">
@@ -102,6 +104,24 @@
             </div>
           </div>
         </div>
+    </div>
+  </div>
+  
+  <div id="modal-game" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="game-information">
+        <div class="game-image">
+          <img src="./img/pokebola.png">
+        </div>
+        <div class="game-first-info">
+          <p>Pokémon GO é um jogo eletrônico free-to-play de realidade aumentada voltado para smartphones. O jogo é desenvolvido entre a Niantic, Inc., a Nintendo e a The Pokémon Company para as plataformas iOS e Android. O jogo foi inicialmente lançado em julho de 2016 para alguns países, eventualmente expandindo para o resto do mundo. Com o uso do sistema de posicionamento global (GPS) e a câmera de dispositivos compatíveis, o jogo permite aos jogadores capturar, batalhar, e treinar criaturas virtuais chamadas Pokémon, as quais aparecem nas telas de dispositivos como se fossem no mundo real.</p>
+        </div>
+      </div>
+      <div class="game-second-info">
+        <h1>Como funciona</h1>
+        <p>Ao jogar Pokémon GO, o usuário interage com um mapa baseado no mundo real. Para capturar o monstrinho, basta arremessar uma Pokébola. Daí em diante, além de tentar pegar todos os tipos diferentes Pokémon, ao atingir o nível 5 do jogo é possível dominar os diversos ginásios espalhados pela cidade. Além dos Ginásios Pokémon, existem pontos específicos nos quais é possível coletar itens e Pokébolas (as chamadas Poképaradas). Esses locais geralmente são pontos muito conhecidos da cidade (museus, monumentos, entre outros).</p>
+      </div>
     </div>
   </div>
   
