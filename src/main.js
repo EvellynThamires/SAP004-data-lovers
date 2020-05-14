@@ -203,7 +203,8 @@ bttnOrder.addEventListener("change", function() {
 
 //evento que mostra os cards pesquisados no input de texto
 bttnSearch.addEventListener("keydown", function () {
-    let searchStringByString = searchPokemon(bttnSearch, data.pokemon)
+    let searchString = bttnSearch.value.toLowerCase();
+    let searchStringByString = searchPokemon(searchString, data.pokemon)
     clearHtml()
     showElements(searchStringByString)
 });

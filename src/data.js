@@ -20,32 +20,28 @@ export const filterOrder = (order, pokemons) => {
 
   if(order == "a-z"){
     return pokemons.sort(function (a, b) {
-      if (a.name > b.name) {
+      
+      if (a.name >= b.name) {
         return 1;
       }
-      if (a.name < b.name) {
+      else if (a.name < b.name) {
         return -1;
       }
-      return 0;
-
     });
   } else {
       return pokemons.sort(function (a, b) {
-        if (a.name > b.name) {
+        if (a.name >= b.name) {
           return -1;
         }
-        if (a.name < b.name) {
+        else if (a.name < b.name) {
           return 1;
         }
-        return 0;
-
     });
   }
 }
 
-export const searchPokemon = (bttnSearch, pokemon) => {
-  let searchString = bttnSearch.value.toLowerCase();
-  let filterPokemon = pokemon.filter(data => {
+export const searchPokemon = (searchString, pokemon) => {
+    let filterPokemon = pokemon.filter(data => {
     let pokemonString = data.name.toLowerCase();
     let stringByString = pokemonString.substr(0, searchString.length);
     return (stringByString.includes(searchString));

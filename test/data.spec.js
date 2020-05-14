@@ -1,4 +1,4 @@
-import {filterType} from '../src/data.js';
+import {filterType, filterOrder, searchPokemon} from '../src/data.js';
 
 const pokemonInput = [
   {
@@ -98,21 +98,74 @@ const data = [
     }]
   }
 ]
+
 describe('filterType', () => { 
   it('is a function', () => { 
     expect(typeof filterType).toBe('function'); 
   })
   
-  it('returns `retorna o tipo do pokemon`', () => {     
+  it('returns `return the type of Pokemon`', () => {     
     let pokemons = filterType("Grass", data)
     expect(pokemons).toEqual(pokemonInput)
   });
   
-  it('returns `retorno não deve ser igual`', () => {     
+  it('returns `should not be equal`', () => {     
     let pokemons = filterType("Fire", data)
     expect(pokemons).not.toEqual(pokemonInput)
   });
 });
 
+it('should throw TypeError when invoked with wrong argument types', () => {
+  expect(() => data.filterType()).toThrow(TypeError);
+  expect(() => data.filterType(0)).toThrow(TypeError);
+  expect(() => data.filterType(null, [])).toThrow(TypeError);
+  expect(() => data.filterType(0, 0)).toThrow(TypeError);
+});
+
+const name = [{name: "Pikachu"}, {name: "Charmander"}, {name: "Squirtle"}]
+const names = [{name: "Bulbasaur"}, {name: "Eevee"}, {name: "Abra"}]
+
+describe('filterOrder', () => { 
+  it('is a function', () => { 
+    expect(typeof filterOrder).toBe('function'); 
+  });
+});
+
+it('returns `return the order of Pokemon`', () => {     
+  let pokemons = filterOrder("a-z", name)
+  expect(pokemons).toEqual(name)
+});
+
+it('returns `should not be equal`', () => {     
+  let pokemons = filterOrder("a-z", names)
+  expect(pokemons).toEqual(names)
+});
 
 
+it('returns `return the order of Pokemon`', () => {     
+  let pokemons = filterOrder("z-a", name)
+  expect(pokemons).toEqual(name)
+});
+
+it('returns `should not be equal`', () => {     
+  let pokemons = filterOrder("z-a", name)
+  expect(pokemons).not.toEqual(names)
+});
+
+it('should throw TypeError when invoked with wrong argument types', () => {
+  expect(() => data.filterOrder()).toThrow(TypeError);
+  expect(() => data.filterOrder(0)).toThrow(TypeError);
+  expect(() => data.filterOrder(null, [])).toThrow(TypeError);
+  expect(() => data.filterOrder(0, 0)).toThrow(TypeError);
+});
+
+describe('searchPokemon', () => { 
+  it('is a function', () => { 
+    expect(typeof searchPokemon).toBe('function'); 
+  })
+});
+
+it('returns teste', () => {     
+  let pokemons = searchPokemon("bulbasaur", data)
+  expect(pokemons).toEqual(pokemonInput)
+});
