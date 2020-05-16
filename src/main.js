@@ -67,6 +67,7 @@ function addEventCards(pokemon) {
             let num = targetElement.dataset.num
             //Caso o número seja igual ao num, guarda na variável.
             let pokemonClicked = data.pokemon.find(element =>  element.num == num)
+            graphic(pokemonClicked)
 
             graphic(pokemonClicked)
 

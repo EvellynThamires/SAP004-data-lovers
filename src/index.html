@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>POKÉMON GO DATABASE</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
@@ -19,43 +19,42 @@
 <body>
   <header>
     <div class="title">
-      <h1>POKÉMON GO DATABASE</h1>
+      POKÉMON GO DATABASE
     </div>
 
     <section class="section-buttons">
-      <div class="know-the-game">
+      <div class="know-the-game padding">
         <button type="button" id="bttn-game" class="bttn align"><img src="img/button-pokemon-go.png">Conheça o
-          jogo!</button>
       </div>
 
-      <div class="favorites">
-        <button type="button" class="bttn align"><img src="img/insignia.png">Favoritos</button>
+      <div class="favorites padding">
+        <button type="button" class="bttn align padding"><img src="img/insignia.png">Favoritos</button>
       </div>
 
-      <div class="filter">
-        <select class="bttn" id="filter-by-type">
-          <option value="filter">Filtrar por tipo</option>
-          <option value="Grass">Planta</option>
-          <option value="Poison">Venenoso</option>
-          <option value="Fire">Fogo</option>
-          <option value="Water">Água</option>
-          <option value="Rock">Pedra</option>
-          <option value="Flying">Voador</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Ice">Gelo</option>
-          <option value="Dragon">Dragão</option>
-          <option value="Bug">Inseto</option>
-          <option value="Normal">Normal</option>
-          <option value="Electric">Elétrico</option>
-          <option value="Fairy">Fada</option>
-          <option value="Ground">Terra</option>
-          <option value="Fighting">Lutador</option>
-          <option value="Psychic">Psíquico</option>
+      <div class="filter padding">
+        <select class="bttn align txt-align" id="filter-by-type">
+          <option value="filter" class="option size">Filtrar por tipo</option>
+          <option value="Grass" class="option size">Planta</option>
+          <option value="Poison" class="option size">Venenoso</option>
+          <option value="Fire" class="option size">Fogo</option>
+          <option value="Water" class="option size">Água</option>
+          <option value="Rock" class="option size">Pedra</option>
+          <option value="Flying" class="option size">Voador</option>
+          <option value="Ghost" class="option size">Fantasma</option>
+          <option value="Ice"  class="option size">Gelo</option>
+          <option value="Dragon" class="option size">Dragão</option>
+          <option value="Bug" class="option size">Inseto</option>
+          <option value="Normal" class="option size">Normal</option>
+          <option value="Electric" class="option size">Elétrico</option>
+          <option value="Fairy" class="option size">Fada</option>
+          <option value="Ground" class="option size">Terra</option>
+          <option value="Fighting" class="option size">Lutador</option>
+          <option value="Psychic" class="option size">Psíquico</option>
         </select>
       </div>
 
-      <div class="order">
-        <select class="bttn" id="order-button">
+      <div class="order padding ">
+        <select class="bttn align txt-align" id="order-button">
           <option value="a-z" class="options-order">Ordenar</option>
           <option value="a-z" class="options-order">A-Z</option>
           <option value="z-a" class="options-order">Z-A</option>
@@ -129,7 +128,7 @@
   <div class="background" id="root"></div>
 
   <footer>
-    © Desenvolvido por Evellyn e Ully
+    <p>© Desenvolvido por Evellyn e Ully</p>
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
