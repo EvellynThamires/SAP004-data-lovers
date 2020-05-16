@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>POKÉMON GO DATABASE</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
@@ -75,16 +76,16 @@
       <span class="close">&times;</span>
         <div class="modal-name">
           <h1></h1>
-          <i class="far fa-star"></i>
         </div>
         <div class="modal-calculus-info">
           <div class="modal-calculus">
+            <canvas id="graphic"></canvas>
           </div>
           <div class="modal-information">
-            <p>Altura: <span id="height"></span></p>
-            <p>Peso: <span id="weight"></span></p>
-            <p>Candy: <span id="candy"></span></p>
-            <p>Quantidade de doces: <span id="candy-quantity"></span></p>
+            <p><i class="fas fa-arrows-alt-v"></i> &nbsp; Altura: <span id="height"></span></p>
+            <p><i class="fas fa-weight"></i> Peso: <span id="weight"></span></p>
+            <p><i class="fas fa-apple-alt"></i> Candy: <span id="candy"></span></p>
+            <p><i class="fas fa-apple-alt"></i> Quantidade de doces: <span id="candy-quantity"></span></p>
           </div>
         </div>
         <div class="modal-status">
@@ -130,7 +131,9 @@
   <footer>
     © Desenvolvido por Evellyn e Ully
   </footer>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://kit.fontawesome.com/29d9b95ced.js" crossorigin="anonymous"></script>
   <script src="main.js" type="module"></script>
 </body>
 

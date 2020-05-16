@@ -33,9 +33,6 @@ export const filterOrder = (order, pokemons) => {
         if (a.name >= b.name) {
           return -1;
         }
-        else if (a.name < b.name) {
-          return 1;
-        }
     });
   }
 }
@@ -48,3 +45,31 @@ export const searchPokemon = (searchString, pokemon) => {
   });
   return filterPokemon;
 };
+
+
+let ctx = document.getElementById('graphic').getContext('2d');
+export const graphic = (pokemon) => {
+  let chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'doughnut',
+  
+      // The data for our dataset
+      data: {
+          labels: ['Chance de nascer', 'Média'],
+          datasets: [{
+              backgroundColor:[
+                  '#FFCD56',
+                  '#FF6384',
+              ],
+              borderColor: [
+                  '#FFCD56',
+                  '#FF6384',
+              ],
+              data: [pokemon.spawn_chance, pokemon.avg_spawns]
+          }]
+      },
+  
+      // Configuration options go here
+      options: {}
+  });
+}

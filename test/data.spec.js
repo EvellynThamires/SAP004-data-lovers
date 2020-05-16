@@ -122,8 +122,10 @@ it('should throw TypeError when invoked with wrong argument types', () => {
   expect(() => data.filterType(0, 0)).toThrow(TypeError);
 });
 
-const name = [{name: "Pikachu"}, {name: "Charmander"}, {name: "Squirtle"}]
-const names = [{name: "Bulbasaur"}, {name: "Eevee"}, {name: "Abra"}]
+const nameAZ = [{name: "Abra"}, {name: "Pikachu"}, {name: "Charmander"}, {name: "Squirtle"}]
+const namesOrderAZ = [{name: "Abra"}, {name: "Charmander"}, {name: "Pikachu"}, {name:"Squirtle"}]
+const nameZA = [{name: "Zubat"}, {name: "Eevee"}, {name: "Tangela"}, {name: "Vulpix"}]
+const namesOrderZA = [{name: "Zubat"}, {name: "Vulpix"}, {name: "Tangela"}, {name: "Eevee"}]
 
 describe('filterOrder', () => { 
   it('is a function', () => { 
@@ -132,24 +134,13 @@ describe('filterOrder', () => {
 });
 
 it('returns `return the order of Pokemon`', () => {     
-  let pokemons = filterOrder("a-z", name)
-  expect(pokemons).toEqual(name)
+  let pokemons = filterOrder("a-z", nameAZ)
+  expect(pokemons).toEqual(namesOrderAZ)
 });
-
-it('returns `should not be equal`', () => {     
-  let pokemons = filterOrder("a-z", names)
-  expect(pokemons).toEqual(names)
-});
-
 
 it('returns `return the order of Pokemon`', () => {     
-  let pokemons = filterOrder("z-a", name)
-  expect(pokemons).toEqual(name)
-});
-
-it('returns `should not be equal`', () => {     
-  let pokemons = filterOrder("z-a", name)
-  expect(pokemons).not.toEqual(names)
+  let pokemons = filterOrder("z-a", nameZA)
+  expect(pokemons).toEqual(namesOrderZA)
 });
 
 it('should throw TypeError when invoked with wrong argument types', () => {
@@ -165,7 +156,14 @@ describe('searchPokemon', () => {
   })
 });
 
-it('returns teste', () => {     
+it('returns the search of the name', () => {     
   let pokemons = searchPokemon("bulbasaur", data)
   expect(pokemons).toEqual(pokemonInput)
+});
+
+it('should throw TypeError when invoked with wrong argument types', () => {
+  expect(() => data.searchPokemon()).toThrow(TypeError);
+  expect(() => data.searchPokemon(0)).toThrow(TypeError);
+  expect(() => data.searchPokemon(null, [])).toThrow(TypeError);
+  expect(() => data.searchPokemon(0, 0)).toThrow(TypeError);
 });
