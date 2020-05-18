@@ -19,6 +19,8 @@ const heightPokemon = document.querySelector("#height");
 const weigthPokemon = document.querySelector("#weight");
 const candyPokemon = document.querySelector("#candy");
 const candyQuantityPokemon = document.querySelector("#candy-quantity");
+const eggPokemon = document.querySelector("#egg");
+const timePokemon = document.querySelector("#spawn-time");
 const typePokemon = document.querySelector("#types");
 const weaknessPokemon = document.querySelector("#weakness");
 const evolutionPokemon = document.querySelector(".content-evolution");
@@ -32,7 +34,7 @@ function showElements(data){
             `
                 <div class="box-pokemon ${element.type[0]}-light" data-num="${element.num}"> 
                     <div class="info-pokemon" data-num="${element.num}">
-                        <p data-num="${element.num}">#${element.num} ${element.name} <i class="far fa-heart"></i></p>
+                        <p data-num="${element.num}">#${element.num} ${element.name} </p>
                     </div>
                     <div class="box-image ${element.type[0]}" data-num="${element.num}">
                         <img src="${element.img}" data-num="${element.num}">  
@@ -67,14 +69,14 @@ function addEventCards(pokemon) {
             let num = targetElement.dataset.num
             //Caso o número seja igual ao num, guarda na variável.
             let pokemonClicked = data.pokemon.find(element =>  element.num == num)
+            
             graphic(pokemonClicked)
 
-            graphic(pokemonClicked)
-
-            namePokemon.innerHTML = `#${pokemonClicked.num} <i class="far fa-heart"></i> ${pokemonClicked.name} `
+            namePokemon.innerHTML = `#${pokemonClicked.num} ${pokemonClicked.name} `
             heightPokemon.innerHTML = `${pokemonClicked.height}`
             weigthPokemon.innerHTML = `${pokemonClicked.weight}`
             candyPokemon.innerHTML = `${pokemonClicked.candy}`
+            timePokemon.innerHTML = `${pokemonClicked.spawn_time}`
             
             if(pokemonClicked.candy_count == undefined){
                 candyQuantityPokemon.innerHTML = "N/A"
@@ -83,14 +85,23 @@ function addEventCards(pokemon) {
                 candyQuantityPokemon.innerHTML = `${pokemonClicked.candy_count}`
             }
             
+            if(pokemonClicked.egg == "Not in Eggs"){
+                egg.innerHTML = "N/A"
+            }
+            else{
+                eggPokemon.innerHTML = `${pokemonClicked.egg}`
+            }
+
             typePokemon.innerHTML = ""
             pokemonClicked.type.forEach(element => {
-                typePokemon.innerHTML += `<div class="chip ${element}">${element}</div>`
+                let iconsPokemon = icons(element)
+                typePokemon.innerHTML += `<div class="chip ${element}"> ${iconsPokemon} ${element}</div>`
             })
 
             weaknessPokemon.innerHTML = ""
             pokemonClicked.weaknesses.forEach(element => {
-                weaknessPokemon.innerHTML += `<div class="chip ${element}">${element}</div>`
+                let iconsPokemon = icons(element)
+                weaknessPokemon.innerHTML += `<div class="chip ${element}"> ${iconsPokemon} ${element}</div>`
             })
 
             evolutionPokemon.innerHTML = "" 
@@ -189,6 +200,68 @@ function showEvolution(infoPokemon) {
         </div>
         `
     })
+}
+
+function icons(element){
+    switch (element) {
+        case "Grass":
+            return '<i class="fas fa-seedling"></i>'
+            break;
+        case "Fire":
+            return '<i class="fas fa-fire"></i>'
+            break;
+        case "Water":
+            return '<i class="fas fa-water"></i>'
+            break;
+        case "Bug":
+            return '<i class="fas fa-bug"></i>'
+            break;
+        case "Normal":
+            return '<i class="fas fa-leaf"></i>'
+            break;
+        case "Poison":
+            return '<i class="fas fa-skull"></i>'
+            break;
+        case "Electric":
+            return '<i class="fas fa-bolt"></i>'
+            break;
+        case "Ground":
+            return '<i class="fas fa-spa"></i>'
+            break;
+        case "Fighting":
+            return '<i class="fas fa-hand-rock"></i>'
+            break;
+        case "Psychic":
+            return '<i class="fas fa-hat-wizard"></i>'
+            break;
+        case "Rock":
+            return '<i class="fas fa-tablets"></i>'
+            break;
+        case "Flying":
+            return '<i class="fas fa-dove"></i>'
+            break;
+        case "Ghost":
+            return '<i class="fas fa-ghost"></i>'
+            break;
+        case "Ice":
+            return '<i class="fas fa-snowflake"></i>'
+            break;
+        case "Dragon":
+            return '<i class="fas fa-dragon"></i>'
+            break;
+        case "Steel":
+            return '<i class="fas fa-cog"></i>'
+            break;
+        case "Dark":
+            return '<i class="fas fa-adjust"></i>'
+            break;
+        case "Fairy":
+            return '<i class="fas fa-magic"></i>'
+            break;
+        default: 
+            return ""
+            break;
+    }
 }
 
 showElements(data.pokemon)

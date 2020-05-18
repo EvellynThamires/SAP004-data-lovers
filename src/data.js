@@ -66,9 +66,6 @@ export const graphic = (pokemon) => {
               ],
               data: [pokemon.spawn_chance, pokemon.avg_spawns]
           }]
-      },
-  
-      // Configuration options go here
-      options: {}
+      }
   });
 }

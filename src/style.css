@@ -1,3 +1,8 @@
+@font-face {
+    font-family: font-pokemon;
+    src: url(./pokemon.ttf);
+}
+
 body {
     background-image: url(./img/fundo.jpg);
     background-repeat: no-repeat;
@@ -5,7 +10,9 @@ body {
 }
 
 .title {
-    font-family: "PT Mono", monospace;
+    font-family: font-pokemon;
+    color: #FBC808;
+    text-shadow: -10px 0 #3E68BA, 0 2px #3E68BA, 2px 0 #3E68BA, 0 -2px #3E68BA;
     font-size: 80px;
     text-align: center;
     padding: 40px;
