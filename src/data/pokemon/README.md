@@ -1,37 +1,66 @@
-# Pokémon
+# Data Lovers - Pokémon Go Database
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+## Índice
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
+1. Projeto Pokémon Go Database
+2. Interatividade
+3. Personas
+4. Protótipo de baixa fidelidade
+5. Teste de usabilidade
+6. Considerações finais
 
-## Hallazgos
 
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
+## 1.Pokémon Go Database
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+Pokémon GO é um jogo de realidade aumentada voltado para smartphones. 
+Com o uso do sistema de posicionamento global (GPS) e a câmera de dispositivos compatíveis, o jogo permite aos jogadores capturar, batalhar, e treinar criaturas virtuais chamadas Pokémon, as quais aparecem nas telas de dispositivos como se fossem no mundo real.
+Neste projeto usamos referências do mundo pokémon tanto para o usuário que já conhece o jogo, quanto para os que querem conhecer.
+
+
+## 2.Interatividade
+
+O usuário poderá:
+
+- Entender o que é o jogo Pokémon Go ao clicar em “Conheça o jogo!” no menu da aplicação.
+
+- Consultar os cards dos pokémons e descobrir a altura, peso, chance de aparecer, fraquezas e evoluções de cada pokémon.
+
+- Ordenar os pokémons por tipo ou por ordem alfabética, clicando nos botões que estão no menu.
+
+- Consultar o pokémon pelo nome usando o campo de pesquisa.
+
+
+## 3.Personas
+
+A pesquisa com o usuário foi fundamental para entendermos  e aplicarmos  as funcionalidades do projeto. O resultado da pesquisa foram algumas sugestões que o usuário gostaria de ver no site, foram elas:
+
+- Chances do pokémon aparecer.
+- Tipos de cada pokémon.
+- Fraquezas de cada pokémon.
+- Informações como peso, altura e doces.
+
+![](/src/img/personas.jpeg)
+
+
+## 4.Protótipo de baixa fidelidade
+
+Fizemos dois modelos de protótipo da interface, um feito com lápis e papel e outro em formato digital. Conforme feita a pesquisa percebemos que algumas das funções não eram necessárias ou eram dispensáveis.
+
+![](src/img/prototipo1.jpeg)
+![](src/img/prototipo2.jpeg)
+![](src/img/prototipomarvel.jpeg)
+
+Link do protótipo digital: https://marvelapp.com/4f76160
+
+
+## 5.Teste de usabilidade
+
+Com o teste de usabilidade obtivemos feedbacks para melhoria do nosso projeto, como por exemplo o tamanho dos nossos cards e o botão de menu que ficaria mais intuitivo separadamente, como fizemos no formato final. 
+Com relação as outras partes do projeto tivemos respostas positivas, tanto a escolha das cores, o conteúdo dos cards dos pokémons e também por ser de fácil usabilidade.
+
+
+## 6.Considerações finais
+
+Esse projeto foi desenvolvido por Evellyn Thamires e Ully Lopes como parte do bootcamp da Laboratória.
+
+Nesse projeto utilizamos HTML, CSS, Vanilla Javascript e testes unitários com JEST.

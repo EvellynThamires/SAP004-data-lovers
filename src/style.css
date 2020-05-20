@@ -1,42 +1,56 @@
+@font-face {
+    font-family: font-pokemon;
+    src: url(./pokemon.ttf);
+}
+
+body {
+    background-image: url(./img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-color: #eeeeee;
+}
 
 .title {
-    font-family: 'PT Mono', monospace;
+    font-family: font-pokemon;
+    color: #FBC808;
+    text-shadow: -10px 0 #3E68BA, 0 2px #3E68BA, 2px 0 #3E68BA, 0 -2px #3E68BA;
     font-size: 80px;
     text-align: center;
     padding: 40px;
 }
 
+.section-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: nowrap;
+}
+
 .bttn {
-    font-family: 'PT Mono', monospace;
+    height: 40px;
     font-size: 20px;
-    text-align: left;
     border-radius: 8px;
     border: 2px solid black;
     background-color: white;
-    width: 280px;
-    height: 45px;
+    background-image: linear-gradient(3deg, rgb(212, 201, 201), transparent);
+    font-family: "PT Mono", monospace;
+    justify-content: center;
+    align-items: center;
 }
 
-.first-row-of-buttons {
+.align {
     display: flex;
-    margin-right: 15px;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon {
-    height: 45px;
-    width: 50px;
-    text-align: center;
-} 
-
-.txt-area {
-    height: 37px;
-}
-
-.second-row-of-buttons {
-    margin-right: 15px;
-    display: flex;
-    padding: 10px;
+.txtarea {
+    background-color: white;
+    border-radius: 8px;
+    background-image: linear-gradient(3deg, rgb(241, 238, 238), transparent);
+    font-family: "PT Mono", monospace;
+    justify-content: center;
+    align-items: center;
+    border-color: white;
 }
 
 .background {
@@ -45,6 +59,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: rgb(56, 54, 54);
+    text-align: center;
+    color: white;
+    height: 100vh;
+    font-family: "PT Mono", monospace;
+    font-size: 15pt;
+    height: 70px;
+    padding-top: 50px;
 }
 
 .box-pokemon {
@@ -52,14 +78,14 @@
     height: 100px;
     margin: 1%;
     text-align: center;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.info-pokemon{
+.info-pokemon {
     padding: 15px;
     color: white;
 }
@@ -68,22 +94,24 @@
     width: 70px;
 }
 
-.box-image{
+.box-image {
     height: 100px;
     width: 100px;
     padding-left: 5px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Normal{
+.Normal {
     background-color: rgb(90, 33, 6);
 }
 
-.Normal-light{
+.Normal-light {
     background-color: rgba(90, 33, 6, 0.73);
 }
 
@@ -107,7 +135,7 @@
     background-color: rgb(34, 139, 34);
 }
 
-.Grass-light{
+.Grass-light {
     background-color: rgba(34, 139, 34, 0.73);
 }
 
@@ -115,133 +143,371 @@
     background-color: rgb(97, 15, 97);
 }
 
-.Poison-light{
+.Poison-light {
     background-color: rgba(97, 15, 97, 0.73);
 }
 
-.Electric{
+.Electric {
     background-color: rgb(197, 197, 23);
 }
 
-.Electric-light{
+.Electric-light {
     background-color: rgba(193, 193, 46, 0.73);
 }
 
-.Ground{
-    background-color: rgb(154, 133, 19)
+.Ground {
+    background-color: rgb(154, 133, 19);
 }
 
-.Ground-light{
+.Ground-light {
     background-color: rgba(154, 133, 19, 0.73);
 }
 
-.Psychic{
+.Psychic {
     background-color: rgb(249, 5, 136);
 }
 
-.Psychic-light{
+.Psychic-light {
     background-color: rgba(249, 5, 136, 0.73);
 }
 
-.Rock{
+.Rock {
     background-color: rgb(181, 119, 60);
 }
 
-.Rock-light{
+.Rock-light {
     background-color: rgba(181, 119, 60, 0.73);
 }
 
-.Ice{
+.Ice {
     background-color: rgb(39, 65, 88);
 }
 
-.Ice-light{
+.Ice-light {
     background-color: rgba(39, 65, 88, 0.73);
 }
 
-.Bug{
+.Bug {
     background-color: rgb(150, 162, 48);
 }
 
-.Bug-light{
+.Bug-light {
     background-color: rgba(150, 162, 48, 0.73);
 }
 
-.Dragon{
-    background-color: rgb(15, 15, 56)
+.Dragon {
+    background-color: rgb(15, 15, 56);
 }
 
-.Dragon-light{
+.Dragon-light {
     background-color: rgba(15, 15, 56, 0.73);
-    
 }
 
-.Ghost{
-    background-color: rgb(158, 39, 78)
+.Ghost {
+    background-color: rgb(158, 39, 78);
 }
 
-.Ghost-light{
+.Ghost-light {
     background-color: rgba(158, 39, 78, 0.73);
 }
 
-.Steel{
+.Steel {
     background-color: rgb(79, 79, 79);
 }
 
-.Steel-light{
+.Steel-light {
     background-color: rgba(79, 79, 79, 0.73);
 }
 
-.Fairy{
-    background-color: rgb(255, 20, 147);
+.Fairy {
+    background-color: rgb(255, 0, 255);
 }
 
-.Fairy-light{
-    background-color: rgba(255, 20, 147, 0.73);
+.Fairy-light {
+    background-color: rgba(255, 0, 255, 0.73);
 }
 
-.Dark{
+.Dark {
     background-color: rgb(139, 69, 19);
 }
 
-.Dark-light{
+.Dark-light {
     background-color: rgba(139, 69, 19, 0.73);
 }
 
-.Flying{
+.Flying {
     background-color: rgb(75, 0, 130);
 }
 
-.Flying-light{
+.Flying-light {
     background-color: rgba(75, 0, 130, 0.73);
 }
 
-.Fighting{
+.Fighting {
     background-color: rgb(160, 0, 32);
 }
 
-.Fighting-light{
+.Fighting-light {
     background-color: rgba(160, 0, 32, 0.73);
+}
+
+.alert {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #FFFFF0;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 20px;
+}  
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h3 {
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-name {
+    text-align: center;
+    font-family: "Signika", sans-serif;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.modal-calculus-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-calculus {
+    text-align: center;
+    width: 48%;
+    border-radius: 20px;
+}
+
+.modal-information {
+    font-family: "Montserrat", sans-serif;
+    width: 51%;
+    border-radius: 20px;
+}
+
+.modal-information p {
+    margin: 10px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 0 11px;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+    border-radius: 25px;
+    color: white;
+    margin-right: 5px;
+}
+
+.modal-status {
+    display: flex;
+    margin: 30px 0;
+}
+
+.modal-type {
+    width: 50%;
+}
+
+.modal-weakness {
+    width: 50%;
+}
+
+.modal-evolution {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-evolutions {
+    width: 100%;
+    padding: 10px;
+    background-image: url(./img/background.jpg);
+    border-radius: 20px;
+}
+
+.content-evolution {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.evolution-info {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    width: 20%;
+}
+
+.evolution-info img {
+    width: 100px;
+    border-radius: 150px;
+    background-color: #a9a9a9;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.evolution-info p {
+    margin: 5px;
+}
+
+.game-information{
+    display: flex;
+    width: 100%;
+}
+
+.game-first-info{
+    width: 80%;
+    padding: 0 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+}
+
+.game-image{
+    width: 20%;
+}
+
+.game-image img{
+    width: 100%;
+    height: auto;
+}
+
+.game-second-info h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+    font-family: 'Jost', sans-serif;
+}
+
+.game-second-info p{
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
 }
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 300px) and (max-width: 767.98px) {
+@media (min-width: 300px) and (max-width: 759.98px) {
+    .title {
+    width: 100%;
+    padding-left: 14%;    
+}
+
+    .section-buttons {
+    display: block;
+    width: 100%;
+    padding: 13%;
+    padding-top: 5%;
+    padding-bottom: 9%;
+    padding-left: 17%;
+}
+
+    .bttn {
+    width: 100%;
+}
+
+    .padding {
+    padding-bottom: 1%;
+}
+
+    .txt-align {
+    text-align-last: center;
+}
+
+    .option-size {
+    width: 100%;
+}
+
+    .txtarea {
+    width: 300px;
+}
+
     .box-pokemon {
-        width: 98%;
-    }
+    width: 47%;
+}
+
+    .background {
+    width: 132vw;
+    margin: 0 auto;
+}
+
+    .modal {
+    width: 100%;
+    height: 100%;
+}  
+
+    .modal-evolution {
+    padding: 11px;
+}
+
+    .modal-content {
+    width: 80%;
+}
+
+    .content-evolution {
+    padding-right: 18%;
+}
+
+    .footer {
+    width: 132%;
+}
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .box-pokemon {
-        width: 98%;
-    }
+@media (min-width: 760px) and (max-width: 991.98px) {
+    .title {
+    text-align: center;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .box-pokemon{
-        width: 46%;
-    }
+    .section-buttons {
+        flex-wrap: wrap;
+}
+
+    .background {
+        width: 107%;
+}
+
+    .padding {
+    padding-bottom: 1%;
+}
+
+    .txt-align {
+    text-align-last: center;
+}
 }

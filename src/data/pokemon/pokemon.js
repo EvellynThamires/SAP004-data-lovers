@@ -1,5 +1,6 @@
 export default {
-  "pokemon": [{
+  "pokemon": [
+    {
     "id": 1,
     "num": "001",
     "name": "Bulbasaur",
