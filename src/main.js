@@ -34,7 +34,7 @@ function showElements(data){
             `
                 <div class="box-pokemon ${element.type[0]}-light" data-num="${element.num}"> 
                     <div class="info-pokemon" data-num="${element.num}">
-                        <p data-num="${element.num}">#${element.num} ${element.name} </p>
+                        <p data-num="${element.num}"> #${element.num} ${element.name}</p>
                     </div>
                     <div class="box-image ${element.type[0]}" data-num="${element.num}">
                         <img src="${element.img}" data-num="${element.num}">  
@@ -72,7 +72,7 @@ function addEventCards(pokemon) {
             
             graphic(pokemonClicked)
 
-            namePokemon.innerHTML = `#${pokemonClicked.num} ${pokemonClicked.name} `
+            namePokemon.innerHTML = `#${pokemonClicked.num} ${pokemonClicked.name}`
             heightPokemon.innerHTML = `${pokemonClicked.height}`
             weigthPokemon.innerHTML = `${pokemonClicked.weight}`
             candyPokemon.innerHTML = `${pokemonClicked.candy}`
@@ -263,6 +263,7 @@ function icons(element){
             break;
     }
 }
+
 
 showElements(data.pokemon)
 
