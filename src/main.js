@@ -6,7 +6,6 @@ const content = document.querySelector("#root");
 //Pegando id dos botões
 const bttnFilter = document.querySelector("#filter-by-type");
 const bttnOrder = document.querySelector("#order-button");
-const bttnFavorite = document.querySelector("#favorite");
 //area de pesquisar pokemon
 const bttnSearch = document.querySelector("#search");
 
@@ -14,8 +13,6 @@ const modal = document.querySelector("#modals");
 const modalGame = document.querySelector("#modal-game");
 const bttnGame = document.querySelector("#bttn-game")
 const span = document.getElementsByClassName("close");
-
-const modalFavorites = document.querySelector("#modal-favorites");
 
 const namePokemon = document.querySelector(".modal-name h1");
 const heightPokemon = document.querySelector("#height");
@@ -272,29 +269,26 @@ showElements(data.pokemon)
 
 let ctx = document.getElementById('graphic').getContext('2d');
 const graphic = (pokemon) => {
-  new Chart(ctx, {
+    new Chart(ctx, {
       // Tipo do gráfico
-      type: 'doughnut',
-  
+    type: 'doughnut',
+
       // Dados para o conjunto de dados
-      data: {
-          labels: ['Chance de aparecer', 'Média'],
-          datasets: [{
-              backgroundColor:[
+    data: {
+        labels: ['Chance de aparecer', 'Média'],
+        datasets: [{
+            backgroundColor:[
                 '#4B0082',
                 '#FFA500', 
-              ],
-              borderColor: [
-                  '#FFFF00',
-              ],
-              data: [pokemon.spawn_chance, pokemon.avg_spawns]
-          }]
-      },
-  
-      // Configuration options go here
-      options: {}
-  });
-  
+            ],
+            borderColor: [
+                '#FFFF00',
+            ],
+            data: [pokemon.spawn_chance, pokemon.avg_spawns]
+        }]
+    }
+});
+
 }
 
 
@@ -337,18 +331,6 @@ bttnGame.addEventListener("click", function(){
     }
 });
 
-bttnFavorite.addEventListener("click", function(){
-    modalFavorites.style.display = "block"
-
-    span[1].onclick = function() {
-        modalFavorites.style.display = "none"
-    }
-    window.onclick = function(event) {
-        if(event.target == modalFavorites) {
-            modalFavorites.style.display = "none"
-        }
-    }
-})
 
 
 
