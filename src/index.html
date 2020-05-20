@@ -90,6 +90,7 @@
             <p><i class="fas fa-egg"></i> Ovo: <span id="egg"></span></p>
             <p><i class="fas fa-clock"></i> Horário para aparecer: <span id="spawn-time"></span></p>
           </div>
+          <div></div>
         </div>
         <div class="modal-status">
           <div class="modal-type">
@@ -128,12 +129,29 @@
       </div>
     </div>
   </div>
+
+  <div id="modal-favorites" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="favorites-information">
+        <div class="favorite-image">
+          <img src="./img/favoritos.png">
+        </div>
+        <div class="title-favorites">
+          <p>Seus pokémons favoritos são:</p>
+        </div>
+      </div>
+      <div class="result-list" id="result-list"></div>
+    </div>
+  </div>
   
   <div class="background" id="root"></div>
 
+  <div class="footer">
   <footer>
     <p>© Desenvolvido por Evellyn e Ully</p>
   </footer>
+</div>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://kit.fontawesome.com/29d9b95ced.js" crossorigin="anonymous"></script>

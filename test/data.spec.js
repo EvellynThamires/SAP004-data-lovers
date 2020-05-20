@@ -82,17 +82,12 @@ const data = [
       {
         num: "003",
         name: "Venusaur",
-      },
-    ],
-    "next_evolution": [{
-      "num": "002",
-      "name": "Ivysaur"
-    }, {
-      "num": "003",
-      "name": "Venusaur"
-    }]
+      }
+    ]
   }
 ]
+
+//FILTRAR TIPO
 
 describe('filterType', () => { 
   it('is a function', () => { 
@@ -116,6 +111,8 @@ it('should throw TypeError when invoked with wrong argument types', () => {
   expect(() => data.filterType(null, [])).toThrow(TypeError);
   expect(() => data.filterType(0, 0)).toThrow(TypeError);
 });
+
+// ORDENAR
 
 const nameAZ = [{name: "Abra"}, {name: "Pikachu"}, {name: "Charmander"}, {name: "Squirtle"}]
 const namesOrderAZ = [{name: "Abra"}, {name: "Charmander"}, {name: "Pikachu"}, {name:"Squirtle"}]
@@ -145,6 +142,9 @@ it('should throw TypeError when invoked with wrong argument types', () => {
   expect(() => data.filterOrder(0, 0)).toThrow(TypeError);
 });
 
+
+// PESQUISAR 
+
 describe('searchPokemon', () => { 
   it('is a function', () => { 
     expect(typeof searchPokemon).toBe('function'); 
@@ -162,3 +162,5 @@ it('should throw TypeError when invoked with wrong argument types', () => {
   expect(() => data.searchPokemon(null, [])).toThrow(TypeError);
   expect(() => data.searchPokemon(0, 0)).toThrow(TypeError);
 });
+
+

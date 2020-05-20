@@ -1,4 +1,4 @@
-import { filterType, filterOrder, searchPokemon, graphic } from './data.js';
+import { filterType, filterOrder, searchPokemon} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 //Pegando a id "Root" do HTML
@@ -6,6 +6,7 @@ const content = document.querySelector("#root");
 //Pegando id dos botões
 const bttnFilter = document.querySelector("#filter-by-type");
 const bttnOrder = document.querySelector("#order-button");
+const bttnFavorite = document.querySelector("#favorite");
 //area de pesquisar pokemon
 const bttnSearch = document.querySelector("#search");
 
@@ -13,6 +14,8 @@ const modal = document.querySelector("#modals");
 const modalGame = document.querySelector("#modal-game");
 const bttnGame = document.querySelector("#bttn-game")
 const span = document.getElementsByClassName("close");
+
+const modalFavorites = document.querySelector("#modal-favorites");
 
 const namePokemon = document.querySelector(".modal-name h1");
 const heightPokemon = document.querySelector("#height");
@@ -267,6 +270,35 @@ function icons(element){
 
 showElements(data.pokemon)
 
+let ctx = document.getElementById('graphic').getContext('2d');
+const graphic = (pokemon) => {
+  new Chart(ctx, {
+      // Tipo do gráfico
+      type: 'doughnut',
+  
+      // Dados para o conjunto de dados
+      data: {
+          labels: ['Chance de aparecer', 'Média'],
+          datasets: [{
+              backgroundColor:[
+                '#4B0082',
+                '#FFA500', 
+              ],
+              borderColor: [
+                  '#FFFF00',
+              ],
+              data: [pokemon.spawn_chance, pokemon.avg_spawns]
+          }]
+      },
+  
+      // Configuration options go here
+      options: {}
+  });
+  
+}
+
+
+
 //evento que mostra os cards filtrados em uma função
 bttnFilter.addEventListener("change", function () {
     let type = bttnFilter[bttnFilter.selectedIndex].value
@@ -301,6 +333,19 @@ bttnGame.addEventListener("click", function(){
     window.onclick = function(event) {
         if(event.target == modalGame) {
             modalGame.style.display = "none"
+        }
+    }
+});
+
+bttnFavorite.addEventListener("click", function(){
+    modalFavorites.style.display = "block"
+
+    span[1].onclick = function() {
+        modalFavorites.style.display = "none"
+    }
+    window.onclick = function(event) {
+        if(event.target == modalFavorites) {
+            modalFavorites.style.display = "none"
         }
     }
 })
