@@ -86,7 +86,7 @@ function addEventCards(pokemon) {
             }
             
             if(pokemonClicked.egg == "Not in Eggs"){
-                egg.innerHTML = "N/A"
+                eggPokemon.innerHTML = "N/A"
             }
             else{
                 eggPokemon.innerHTML = `${pokemonClicked.egg}`
@@ -206,61 +206,42 @@ function icons(element){
     switch (element) {
         case "Grass":
             return '<i class="fas fa-seedling"></i>'
-            break;
         case "Fire":
             return '<i class="fas fa-fire"></i>'
-            break;
         case "Water":
             return '<i class="fas fa-water"></i>'
-            break;
         case "Bug":
             return '<i class="fas fa-bug"></i>'
-            break;
         case "Normal":
             return '<i class="fas fa-leaf"></i>'
-            break;
         case "Poison":
             return '<i class="fas fa-skull"></i>'
-            break;
         case "Electric":
             return '<i class="fas fa-bolt"></i>'
-            break;
         case "Ground":
             return '<i class="fas fa-spa"></i>'
-            break;
         case "Fighting":
             return '<i class="fas fa-hand-rock"></i>'
-            break;
         case "Psychic":
             return '<i class="fas fa-hat-wizard"></i>'
-            break;
         case "Rock":
             return '<i class="fas fa-tablets"></i>'
-            break;
         case "Flying":
             return '<i class="fas fa-dove"></i>'
-            break;
         case "Ghost":
             return '<i class="fas fa-ghost"></i>'
-            break;
         case "Ice":
             return '<i class="fas fa-snowflake"></i>'
-            break;
         case "Dragon":
             return '<i class="fas fa-dragon"></i>'
-            break;
         case "Steel":
             return '<i class="fas fa-cog"></i>'
-            break;
         case "Dark":
             return '<i class="fas fa-adjust"></i>'
-            break;
         case "Fairy":
             return '<i class="fas fa-magic"></i>'
-            break;
         default: 
             return ""
-            break;
     }
 }
 

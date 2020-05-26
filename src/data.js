@@ -23,7 +23,7 @@ export const filterOrder = (order, pokemons) => {
       if (a.name >= b.name) {
         return 1;
       }
-      else if (a.name < b.name) {
+      else {
         return -1;
       }
     });
